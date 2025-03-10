@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "856997660335",
+    "project_id": "islamic-lifestyle-muslim",
+    "storage_bucket": "islamic-lifestyle-muslim.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:856997660335:android:3af29a8eb9a6bb0f7fb65a",
+        "android_client_info": {
+          "package_name": "com.sakib.islam"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyArQFh1maFa3tHaSGRxcvWGdrBwjpOi3aY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
