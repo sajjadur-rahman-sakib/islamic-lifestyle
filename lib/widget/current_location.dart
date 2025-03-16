@@ -47,7 +47,7 @@ Future<void> getAddressFromCoordinates() async {
 }
 
 Stream<Position> getPositionStream() {
-  final locationSettings = const LocationSettings(
+  const locationSettings = LocationSettings(
     accuracy: LocationAccuracy.high,
     distanceFilter: 100,
   );

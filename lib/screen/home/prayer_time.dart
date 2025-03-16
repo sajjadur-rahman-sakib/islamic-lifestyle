@@ -9,6 +9,7 @@ class PrayerTime extends StatefulWidget {
     required this.hijriDateTime,
   });
 
+  // ignore: prefer_typing_uninitialized_variables
   final hijriDateTime;
 
   @override

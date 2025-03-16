@@ -2,13 +2,12 @@ name: sakib
 
 description: "A new Flutter project."
 
-publish_to: 'none'
+publish_to: "none"
 
 version: 1.0.0+1
 
 environment:
-  sdk: '>=3.3.1 <4.0.0'
-
+  sdk: ">=3.3.1 <4.0.0"
 
 dependencies:
   flutter:
@@ -32,7 +31,7 @@ dependencies:
   firebase_core: ^3.4.0
   cloud_firestore: ^5.4.0
   firebase_messaging: ^15.1.0
-
+  android_intent_plus: ^5.3.0
 
 dev_dependencies:
   flutter_test:
@@ -41,12 +40,10 @@ dev_dependencies:
   flutter_lints: ^3.0.0
   flutter_launcher_icons: ^0.13.1
 
-
 flutter_launcher_icons:
   android: true
   ios: true
   image_path: "assets/images/icon.png"
-
 
 flutter:
   uses-material-design: true

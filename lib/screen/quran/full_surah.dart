@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sakib/service/full_surah_api_service.dart';
 import 'package:sakib/utility/app_colors.dart';
-import 'package:sakib/utility/loading_scenario.dart';
+import 'package:sakib/widget/loading_scenario.dart';
 
 class FullSurah extends StatefulWidget {
   const FullSurah({

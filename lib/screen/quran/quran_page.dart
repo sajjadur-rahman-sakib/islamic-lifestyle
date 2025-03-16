@@ -3,7 +3,7 @@ import 'package:just_audio/just_audio.dart';
 import 'package:sakib/screen/quran/full_surah.dart';
 import 'package:sakib/service/quran_surah_api_service.dart';
 import 'package:sakib/utility/app_colors.dart';
-import 'package:sakib/utility/loading_scenario.dart';
+import 'package:sakib/widget/loading_scenario.dart';
 import 'package:sakib/widget/option_app_bar.dart';
 
 class Quran extends StatefulWidget {
@@ -52,6 +52,7 @@ class _QuranState extends State<Quran> {
       i = index;
     }
 
+    // ignore: unused_local_variable
     final duration =
         await player.setUrl('https://server6.mp3quran.net/thubti/$i.mp3');
 
