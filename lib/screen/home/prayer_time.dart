@@ -1,7 +1,9 @@
 import 'package:adhan/adhan.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 import 'package:sakib/widget/current_location.dart';
+import 'package:sakib/widget/prayer_alarm.dart';
 
 class PrayerTime extends StatefulWidget {
   const PrayerTime({
@@ -17,6 +19,8 @@ class PrayerTime extends StatefulWidget {
 }
 
 class PrayerTimeState extends State<PrayerTime> {
+  PrayerAlarm prayerAlarm = Get.put(PrayerAlarm());
+
   @override
   Widget build(BuildContext context) {
     final myCoordinates = Coordinates(
@@ -79,37 +83,44 @@ class PrayerTimeState extends State<PrayerTime> {
                 icon: const Icon(Icons.nights_stay_sharp, color: Colors.green),
                 time: DateFormat.jm().format(prayerTimes.fajr),
                 title: 'Shehri',
+                alarmTime: DateFormat.jm().format(prayerTimes.fajr),
               ),
               _prayerTimeRow(
                 icon: const Icon(Icons.sunny_snowing, color: Colors.brown),
                 time: DateFormat.jm().format(prayerTimes.maghrib),
                 title: 'Iftar',
+                alarmTime: DateFormat.jm().format(prayerTimes.maghrib),
               ),
               _prayerTimeRow(
                 icon: const Icon(Icons.wb_sunny, color: Colors.greenAccent),
                 time: '${fajrStart.trim()} - ${fajrEnd.trim()}',
                 title: 'Fajr',
+                alarmTime: fajrStart.trim(),
               ),
               _prayerTimeRow(
                 icon: const Icon(Icons.brightness_high, color: Colors.yellow),
                 time: '${dhuhrStart.trim()} - ${dhuhrEnd.trim()}',
                 title: 'Dhuhr',
+                alarmTime: dhuhrStart.trim(),
               ),
               _prayerTimeRow(
                 icon: const Icon(Icons.brightness_medium, color: Colors.blue),
                 time: '${asrStart.trim()} - ${asrEnd.trim()}',
                 title: 'Asr',
+                alarmTime: asrStart.trim(),
               ),
               _prayerTimeRow(
                 icon: const Icon(Icons.sunny_snowing, color: Colors.blueGrey),
                 time: '${maghribStart.trim()} - ${maghribEnd.trim()}',
                 title: 'Maghrib',
+                alarmTime: maghribStart.trim(),
               ),
               _prayerTimeRow(
                 icon: const Icon(Icons.nightlight_round_sharp,
                     color: Colors.deepPurple),
                 time: '${ishaStart.trim()} - ${ishaEnd.trim()}',
                 title: 'Isha',
+                alarmTime: ishaStart.trim(),
               ),
             ],
           ),
@@ -122,6 +133,7 @@ class PrayerTimeState extends State<PrayerTime> {
     required Icon icon,
     required String time,
     required String title,
+    required String alarmTime,
   }) {
     double width = MediaQuery.of(context).size.width;
 
@@ -141,9 +153,15 @@ class PrayerTimeState extends State<PrayerTime> {
           ),
           SizedBox(width: width / 30),
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              DateTime alarmDateTime = DateFormat.jm().parse(alarmTime);
+              int hour = alarmDateTime.hour;
+              int minute = alarmDateTime.minute;
+              prayerAlarm.setAlarm(hour, minute);
+              debugPrint('Alarm set for $hour:$minute');
+            },
             icon: const Icon(
-              Icons.mosque,
+              Icons.alarm,
               color: Colors.white54,
             ),
           )
