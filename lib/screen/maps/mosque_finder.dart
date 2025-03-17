@@ -105,32 +105,35 @@ class _MosqueFinderState extends State<MosqueFinder> {
       ),
     );
 
-    String googleMapsApiKey = 'AIzaSyCTnyJwxNSevj6hmTxE4gpDZo0Tcw7eD8Y';
+    String googleMapsApiKey = 'AIzaSyDFQ3pm9BAlkTJiE2AU1UDpG5ao2PJk0hc';
     String url =
         'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${currentLocation.latitude},${currentLocation.longitude}&radius=1500&type=mosque&key=$googleMapsApiKey';
 
     final response = await http.get(Uri.parse(url));
+    debugPrint(response.body);
     if (response.statusCode == 200) {
       final jsonResponse = json.decode(response.body);
       final results = jsonResponse['results'];
 
-      setState(() {
-        _markers.clear();
-        for (var result in results) {
-          final marker = Marker(
-            markerId: MarkerId(result['place_id']),
-            position: LatLng(
-              result['geometry']['location']['lat'],
-              result['geometry']['location']['lng'],
-            ),
-            infoWindow: InfoWindow(
-              title: result['name'],
-              snippet: result['vicinity'],
-            ),
-          );
-          _markers.add(marker);
-        }
-      });
+      setState(
+        () {
+          _markers.clear();
+          for (var result in results) {
+            final marker = Marker(
+              markerId: MarkerId(result['place_id']),
+              position: LatLng(
+                result['geometry']['location']['lat'],
+                result['geometry']['location']['lng'],
+              ),
+              infoWindow: InfoWindow(
+                title: result['name'],
+                snippet: result['vicinity'],
+              ),
+            );
+            _markers.add(marker);
+          }
+        },
+      );
     }
   }
 }
