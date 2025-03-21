@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:geolocator/geolocator.dart';
+import 'package:get/get.dart';
 import 'package:sakib/screen/landing/landing_page.dart';
 import 'package:sakib/utility/asset_paths.dart';
 import 'package:sakib/widget/current_location.dart';
@@ -13,6 +14,8 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+  CurrentLocation location = Get.put(CurrentLocation());
+
   @override
   void initState() {
     super.initState();
@@ -40,7 +43,7 @@ class _SplashScreenState extends State<SplashScreen> {
       return;
     }
 
-    currentLocation = await Geolocator.getCurrentPosition(
+    location.currentLocation = await Geolocator.getCurrentPosition(
         desiredAccuracy: LocationAccuracy.high);
 
     if (mounted) {

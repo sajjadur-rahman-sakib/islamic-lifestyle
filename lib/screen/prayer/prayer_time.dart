@@ -1,5 +1,6 @@
 import 'package:adhan/adhan.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 import 'package:sakib/utility/app_colors.dart';
 import 'package:sakib/widget/current_location.dart';
@@ -12,17 +13,19 @@ class PrayerTime extends StatefulWidget {
 }
 
 class _PrayerTimeState extends State<PrayerTime> {
+  CurrentLocation location = Get.put(CurrentLocation());
+
   @override
-  void initState() {
-    _getCurrentLocation();
+  void initState() async {
     super.initState();
+    location.currentLocation = await location.getCurrentLocation();
   }
 
   @override
   Widget build(BuildContext context) {
     final myCoordinates = Coordinates(
-        currentLocation?.latitude ?? 23.727666597691943,
-        currentLocation?.longitude ?? 90.41054998347452);
+        location.currentLocation?.latitude ?? 23.727666597691943,
+        location.currentLocation?.longitude ?? 90.41054998347452);
     final params = CalculationMethod.karachi.getParameters();
     params.madhab = Madhab.hanafi;
     final prayerTimes = PrayerTimes.today(myCoordinates, params);
@@ -129,10 +132,6 @@ class _PrayerTimeState extends State<PrayerTime> {
       ],
     );
   }
-}
-
-_getCurrentLocation() async {
-  currentLocation = await getCurrentLocation();
 }
 
 Widget buildNameAndTime(BuildContext context, String name, String time) {

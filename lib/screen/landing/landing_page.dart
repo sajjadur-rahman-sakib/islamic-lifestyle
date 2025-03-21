@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:sakib/screen/dates/calendar_page.dart';
 import 'package:sakib/screen/home/home_page.dart';
 import 'package:sakib/screen/prayer/prayer_page.dart';
@@ -14,6 +15,8 @@ class LandingPage extends StatefulWidget {
 }
 
 class _LandingState extends State<LandingPage> {
+  CurrentLocation location = Get.put(CurrentLocation());
+
   int currentIndex = 2;
   final screens = [
     const Quran(),
@@ -30,8 +33,8 @@ class _LandingState extends State<LandingPage> {
   }
 
   _locationPermission() async {
-    currentLocation = await getCurrentLocation();
-    await getAddressFromCoordinates();
+    location.currentLocation = await location.getCurrentLocation();
+    await location.getAddressFromCoordinates();
   }
 
   @override

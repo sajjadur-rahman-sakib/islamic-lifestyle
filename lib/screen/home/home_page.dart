@@ -1,5 +1,6 @@
 import 'package:adhan/adhan.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hijri/hijri_calendar.dart';
 import 'package:intl/intl.dart';
 import 'package:sakib/screen/home/option_button.dart';
@@ -18,14 +19,27 @@ class _HomeState extends State<Home> {
   var currentTime = DateFormat('hh:mm a').format(DateTime.now());
   var hijriDateTime = HijriCalendar.now();
 
+  CurrentLocation location = Get.put(CurrentLocation());
+
+  @override
+  void initState() {
+    super.initState();
+    fetchLocationData();
+  }
+
+  void fetchLocationData() async {
+    await location.getAddressFromCoordinates();
+    setState(() {});
+  }
+
   @override
   Widget build(BuildContext context) {
     String prayerName = 'No Prayer';
     String nextPrayer = 'No Prayer';
 
     final myCoordinates = Coordinates(
-        currentLocation?.latitude ?? 23.727666597691943,
-        currentLocation?.longitude ?? 90.41054998347452);
+        location.currentLocation?.latitude ?? 23.727666597691943,
+        location.currentLocation?.longitude ?? 90.41054998347452);
     final params = CalculationMethod.karachi.getParameters();
     params.madhab = Madhab.hanafi;
     final prayerTimes = PrayerTimes.today(myCoordinates, params);
@@ -104,7 +118,7 @@ class _HomeState extends State<Home> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Text(
-                              currentCityAddress,
+                              location.currentCityAddress.obs.toString(),
                               style: const TextStyle(
                                 color: AppColors.textDefaultColor,
                                 fontSize: 16,

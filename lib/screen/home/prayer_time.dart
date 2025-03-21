@@ -19,13 +19,15 @@ class PrayerTime extends StatefulWidget {
 }
 
 class PrayerTimeState extends State<PrayerTime> {
+  CurrentLocation location = Get.put(CurrentLocation());
+
   PrayerAlarm prayerAlarm = Get.put(PrayerAlarm());
 
   @override
   Widget build(BuildContext context) {
     final myCoordinates = Coordinates(
-        currentLocation?.latitude ?? 23.727666597691943,
-        currentLocation?.longitude ?? 90.41054998347452);
+        location.currentLocation?.latitude ?? 23.727666597691943,
+        location.currentLocation?.longitude ?? 90.41054998347452);
     final params = CalculationMethod.karachi.getParameters();
     params.madhab = Madhab.hanafi;
     final prayerTimes = PrayerTimes.today(myCoordinates, params);
