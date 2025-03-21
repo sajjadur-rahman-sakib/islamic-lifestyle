@@ -30,8 +30,8 @@ class OptionButton extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 buildDatesButton(context),
+                buildMapsButton(context),
                 buildMasylaButton(context),
-                buildDuasButton(context),
                 buildZakatButton(context),
               ],
             ),

@@ -1,11 +1,9 @@
 import 'package:adhan/adhan.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:hijri/hijri_calendar.dart';
 import 'package:intl/intl.dart';
 import 'package:sakib/screen/home/option_button.dart';
 import 'package:sakib/screen/home/prayer_time.dart';
-import 'package:sakib/screen/maps/mosque_finder.dart';
 import 'package:sakib/utility/app_colors.dart';
 import 'package:sakib/widget/current_location.dart';
 
@@ -76,7 +74,7 @@ class _HomeState extends State<Home> {
       nextPrayer = 'Fajr';
     }
 
-    double width = MediaQuery.of(context).size.width;
+    double height = MediaQuery.of(context).size.height;
 
     return Scaffold(
       backgroundColor: AppColors.primaryBackgroundColor,
@@ -97,39 +95,20 @@ class _HomeState extends State<Home> {
                     children: [
                       Padding(
                         padding: const EdgeInsets.only(
-                            left: 10, right: 10, top: 30, bottom: 0),
+                          left: 10,
+                          right: 10,
+                          top: 15,
+                          bottom: 15,
+                        ),
                         child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            IconButton(
-                              onPressed: () async {
-                                currentLocation = await getCurrentLocation();
-                                await getAddressFromCoordinates();
-                              },
-                              icon: Image.asset(
-                                'assets/icons/location.png',
-                                width: width / 18,
-                                height: width / 18,
-                                color: AppColors.textDefaultColor,
-                              ),
-                            ),
                             Text(
                               currentCityAddress,
                               style: const TextStyle(
                                 color: AppColors.textDefaultColor,
                                 fontSize: 16,
                                 fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                            IconButton(
-                              onPressed: () {
-                                Get.to(const MosqueFinder());
-                              },
-                              icon: Image.asset(
-                                'assets/icons/maps.png',
-                                width: width / 18,
-                                height: width / 18,
-                                color: AppColors.textDefaultColor,
                               ),
                             ),
                           ],
@@ -141,11 +120,15 @@ class _HomeState extends State<Home> {
                           Text(
                             prayerName,
                             style: const TextStyle(
-                                color: AppColors.textDefaultColor,
-                                fontSize: 24,
-                                fontWeight: FontWeight.bold),
+                              color: AppColors.textDefaultColor,
+                              fontSize: 28,
+                              fontWeight: FontWeight.bold,
+                            ),
                           )
                         ],
+                      ),
+                      SizedBox(
+                        height: height / 100,
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -159,6 +142,9 @@ class _HomeState extends State<Home> {
                           )
                         ],
                       ),
+                      SizedBox(
+                        height: height / 100,
+                      ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -166,7 +152,7 @@ class _HomeState extends State<Home> {
                             'Next Prayer : $nextPrayer',
                             style: const TextStyle(
                                 color: AppColors.textDefaultColor,
-                                fontSize: 20,
+                                fontSize: 24,
                                 fontWeight: FontWeight.bold),
                           )
                         ],
