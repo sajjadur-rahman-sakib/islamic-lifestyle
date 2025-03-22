@@ -20,19 +20,19 @@ class OptionButton extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                buildQiblaButton(context),
+                buildTasbihButton(context),
                 buildPrayerButton(context),
                 buildQuranButton(context),
-                buildTasbihButton(context)
+                buildQiblaButton(context),
               ],
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                buildDatesButton(context),
-                buildMapsButton(context),
-                buildMasylaButton(context),
                 buildZakatButton(context),
+                buildMapsButton(context),
+                buildKalimaButton(context),
+                buildDatesButton(context),
               ],
             ),
           ],

@@ -16,9 +16,14 @@ class _PrayerTimeState extends State<PrayerTime> {
   CurrentLocation location = Get.put(CurrentLocation());
 
   @override
-  void initState() async {
+  void initState() {
     super.initState();
+    fetchLocationData();
+  }
+
+  void fetchLocationData() async {
     location.currentLocation = await location.getCurrentLocation();
+    setState(() {});
   }
 
   @override

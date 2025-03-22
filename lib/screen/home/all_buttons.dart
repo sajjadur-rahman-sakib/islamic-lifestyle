@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sakib/screen/dates/calendar_page.dart';
+import 'package:sakib/screen/kalima/kalima_page.dart';
 import 'package:sakib/screen/maps/mosque_finder.dart';
 import 'package:sakib/screen/prayer/prayer_page.dart';
 import 'package:sakib/screen/qibla/qibla_page.dart';
@@ -130,7 +131,7 @@ Widget buildDatesButton(BuildContext context) {
   );
 }
 
-Widget buildMasylaButton(BuildContext context) {
+Widget buildKalimaButton(BuildContext context) {
   double height = MediaQuery.of(context).size.height;
   double width = MediaQuery.of(context).size.width;
 
@@ -145,7 +146,7 @@ Widget buildMasylaButton(BuildContext context) {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => const MosqueFinder(),
+            builder: (context) => KalimaPage(),
           ),
         );
       },
@@ -153,13 +154,13 @@ Widget buildMasylaButton(BuildContext context) {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Image.asset(
-            'assets/icons/masyla.png',
+            'assets/icons/kalima.png',
             height: height / 30,
             width: height / 30,
           ),
           const SizedBox(height: 4),
           const Text(
-            'Masyla',
+            'Kalima',
             style: TextStyle(
               color: Colors.white,
               fontSize: 12,
