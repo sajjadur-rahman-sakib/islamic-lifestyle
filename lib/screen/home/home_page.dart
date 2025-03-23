@@ -111,8 +111,8 @@ class _HomeState extends State<Home> {
                         padding: const EdgeInsets.only(
                           left: 10,
                           right: 10,
-                          top: 15,
-                          bottom: 15,
+                          top: 50,
+                          bottom: 10,
                         ),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,

@@ -27,7 +27,8 @@ class _MosqueFinderState extends State<MosqueFinder> {
 
   Future<void> _setInitialLocation() async {
     Position position = await Geolocator.getCurrentPosition(
-        desiredAccuracy: LocationAccuracy.high);
+      desiredAccuracy: LocationAccuracy.high,
+    );
     setState(() {
       _initialLocation = LatLng(position.latitude, position.longitude);
     });
@@ -93,7 +94,8 @@ class _MosqueFinderState extends State<MosqueFinder> {
 
   Future<void> _searchMosques() async {
     Position position = await Geolocator.getCurrentPosition(
-        desiredAccuracy: LocationAccuracy.high);
+      desiredAccuracy: LocationAccuracy.high,
+    );
     LatLng currentLocation = LatLng(position.latitude, position.longitude);
 
     _mapController?.animateCamera(

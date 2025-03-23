@@ -90,7 +90,9 @@ class KalimaPage extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(height: 20), // Added spacing
+              SizedBox(
+                height: MediaQuery.of(context).size.height / 50,
+              ), // Added spacing
             ],
           );
         },

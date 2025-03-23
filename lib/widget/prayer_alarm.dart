@@ -9,7 +9,7 @@ class PrayerAlarm extends GetxController {
       arguments: {
         'android.intent.extra.alarm.HOUR': hour,
         'android.intent.extra.alarm.MINUTES': minute,
-        'android.intent.extra.alarm.MESSAGE': '$prayer Prayer Alarm',
+        'android.intent.extra.alarm.MESSAGE': prayer,
         'android.intent.extra.alarm.SKIP_UI': false,
       },
       flags: [Flag.FLAG_ACTIVITY_NEW_TASK],

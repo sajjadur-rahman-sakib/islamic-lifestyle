@@ -60,7 +60,7 @@ class PrayerTimeState extends State<PrayerTime> {
     double height = MediaQuery.of(context).size.height;
 
     return Expanded(
-      flex: 55,
+      flex: 50,
       child: Container(
         width: double.infinity,
         decoration: const BoxDecoration(
