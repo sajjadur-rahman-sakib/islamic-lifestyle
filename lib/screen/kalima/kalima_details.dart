@@ -21,45 +21,47 @@ class KalimaDetails extends StatelessWidget {
     return Scaffold(
       backgroundColor: AppColors.primaryBackgroundColor,
       appBar: optionAppBar(title),
-      body: Padding(
-        padding: const EdgeInsets.all(10),
-        child: Container(
+      body: SingleChildScrollView(
+        child: Padding(
           padding: const EdgeInsets.all(10),
-          decoration: BoxDecoration(
-            color: AppColors.secondaryBackgroundColor,
-            borderRadius: BorderRadius.circular(10),
-          ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Text(
-                arabic,
-                textAlign: TextAlign.center,
-                style: const TextStyle(
-                  fontSize: 24,
-                  color: AppColors.textDefaultColor,
-                  fontWeight: FontWeight.bold,
+          child: Container(
+            padding: const EdgeInsets.all(10),
+            decoration: BoxDecoration(
+              color: AppColors.secondaryBackgroundColor,
+              borderRadius: BorderRadius.circular(10),
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Text(
+                  arabic,
+                  textAlign: TextAlign.center,
+                  style: const TextStyle(
+                    fontSize: 20,
+                    color: AppColors.textDefaultColor,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
-              ),
-              const Divider(),
-              Text(
-                translation,
-                textAlign: TextAlign.center,
-                style: const TextStyle(
-                  fontSize: 20,
-                  color: AppColors.textDefaultColor,
+                const Divider(),
+                Text(
+                  translation,
+                  textAlign: TextAlign.center,
+                  style: const TextStyle(
+                    fontSize: 18,
+                    color: AppColors.textDefaultColor,
+                  ),
                 ),
-              ),
-              const Divider(),
-              Text(
-                translation,
-                textAlign: TextAlign.center,
-                style: const TextStyle(
-                  fontSize: 18,
-                  color: AppColors.textDefaultColor,
+                const Divider(),
+                Text(
+                  translation,
+                  textAlign: TextAlign.center,
+                  style: const TextStyle(
+                    fontSize: 18,
+                    color: AppColors.textDefaultColor,
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),

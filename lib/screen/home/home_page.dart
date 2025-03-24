@@ -111,7 +111,7 @@ class _HomeState extends State<Home> {
                         padding: const EdgeInsets.only(
                           left: 10,
                           right: 10,
-                          top: 50,
+                          top: 40,
                           bottom: 10,
                         ),
                         child: Row(
@@ -142,7 +142,7 @@ class _HomeState extends State<Home> {
                         ],
                       ),
                       SizedBox(
-                        height: height / 100,
+                        height: height / 150,
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -157,7 +157,7 @@ class _HomeState extends State<Home> {
                         ],
                       ),
                       SizedBox(
-                        height: height / 100,
+                        height: height / 150,
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
