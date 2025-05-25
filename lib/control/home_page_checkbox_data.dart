@@ -10,9 +10,11 @@ class HomePageCheckboxValue {
   Future<Map<String, bool>> loadCheckboxValues(
       Map<String, bool> checkboxValues) async {
     Map<String, bool> loadedValues = {};
-    checkboxValues.forEach((key, value) {
-      loadedValues[key] = sharedPreferences.getBool(key) ?? value;
-    });
+    checkboxValues.forEach(
+      (key, value) {
+        loadedValues[key] = sharedPreferences.getBool(key) ?? value;
+      },
+    );
     return loadedValues;
   }
 
