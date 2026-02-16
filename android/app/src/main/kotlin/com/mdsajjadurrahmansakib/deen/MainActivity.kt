@@ -1,4 +1,4 @@
-package com.sakib.islam
+package com.mdsajjadurrahmansakib.deen
 
 import io.flutter.embedding.android.FlutterActivity
 

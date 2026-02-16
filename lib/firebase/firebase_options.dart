@@ -64,7 +64,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '856997660335',
     projectId: 'islamic-lifestyle-muslim',
     storageBucket: 'islamic-lifestyle-muslim.appspot.com',
-    iosBundleId: 'com.sakib.islam',
+    iosBundleId: 'com.mdsajjadurrahmansakib.deen',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
@@ -73,7 +73,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '856997660335',
     projectId: 'islamic-lifestyle-muslim',
     storageBucket: 'islamic-lifestyle-muslim.appspot.com',
-    iosBundleId: 'com.sakib.sakib',
+    iosBundleId: 'com.mdsajjadurrahmansakib.deen',
   );
 
   static const FirebaseOptions windows = FirebaseOptions(
