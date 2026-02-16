@@ -20,7 +20,7 @@ class _PrayerState extends State<Prayer> {
     double width = MediaQuery.of(context).size.width;
 
     return Scaffold(
-      backgroundColor: const Color.fromRGBO(20, 30, 40, 25),
+      backgroundColor: AppColors.primaryBackgroundColor,
       appBar: optionAppBar('Prayer Time'),
       body: Column(
         children: [
@@ -45,7 +45,7 @@ class _PrayerState extends State<Prayer> {
           Expanded(
             child: Container(
               decoration: const BoxDecoration(
-                color: Color.fromRGBO(30, 40, 50, 100),
+                color: AppColors.secondaryBackgroundColor,
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(50),
                   topRight: Radius.circular(50),

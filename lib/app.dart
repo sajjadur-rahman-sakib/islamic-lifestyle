@@ -19,7 +19,7 @@ class _MyAppState extends State<MyApp> {
       theme: ThemeData(
         appBarTheme: const AppBarTheme(
           centerTitle: true,
-          color: Color.fromRGBO(20, 30, 40, 25),
+          backgroundColor: Color.fromRGBO(20, 30, 40, 25),
           titleTextStyle: TextStyle(color: Colors.white, fontSize: 30),
           iconTheme: IconThemeData(color: Colors.white),
         ),

@@ -27,6 +27,7 @@ class _MosqueFinderState extends State<MosqueFinder> {
 
   Future<void> _setInitialLocation() async {
     Position position = await Geolocator.getCurrentPosition(
+      // ignore: deprecated_member_use
       desiredAccuracy: LocationAccuracy.high,
     );
     setState(() {
@@ -94,6 +95,7 @@ class _MosqueFinderState extends State<MosqueFinder> {
 
   Future<void> _searchMosques() async {
     Position position = await Geolocator.getCurrentPosition(
+      // ignore: deprecated_member_use
       desiredAccuracy: LocationAccuracy.high,
     );
     LatLng currentLocation = LatLng(position.latitude, position.longitude);

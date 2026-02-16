@@ -44,6 +44,7 @@ class _SplashScreenState extends State<SplashScreen> {
     }
 
     location.currentLocation = await Geolocator.getCurrentPosition(
+        // ignore: deprecated_member_use
         desiredAccuracy: LocationAccuracy.high);
 
     if (mounted) {

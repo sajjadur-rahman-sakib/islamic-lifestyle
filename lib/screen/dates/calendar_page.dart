@@ -37,10 +37,10 @@ class _CalendarState extends State<Calendar> {
               headerStyle: const HeaderStyle(
                 formatButtonVisible: false,
                 titleCentered: true,
-                titleTextStyle: TextStyle(color: Colors.white),
+                titleTextStyle: TextStyle(color: AppColors.textDefaultColor),
                 leftChevronIcon: Icon(
                   Icons.chevron_left,
-                  color: Colors.white,
+                  color: AppColors.iconDefaultColor,
                 ),
                 rightChevronIcon: Icon(
                   Icons.chevron_right,
@@ -62,14 +62,14 @@ class _CalendarState extends State<Calendar> {
                 weekendTextStyle: TextStyle(
                   color: AppColors.textDefaultColor,
                 ),
-                selectedTextStyle: TextStyle(color: Colors.black),
-                todayTextStyle: TextStyle(color: Colors.black),
+                selectedTextStyle: TextStyle(color: AppColors.textDefaultColor),
+                todayTextStyle: TextStyle(color: AppColors.textDefaultColor),
                 todayDecoration: BoxDecoration(
-                  color: Colors.blueGrey,
+                  color: AppColors.functionalTextBoxColor,
                   shape: BoxShape.circle,
                 ),
                 selectedDecoration: BoxDecoration(
-                  color: Colors.blueAccent,
+                  color: AppColors.secondaryBackgroundColor,
                   shape: BoxShape.circle,
                 ),
               ),

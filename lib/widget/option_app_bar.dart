@@ -1,8 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:sakib/utility/app_colors.dart';
 
 AppBar optionAppBar(String title) {
   return AppBar(
-    title: Text(title),
+    backgroundColor: AppColors.primaryBackgroundColor,
+    title: Text(
+      title,
+      style: const TextStyle(
+        color: AppColors.textDefaultColor,
+      ),
+    ),
+    iconTheme: const IconThemeData(color: AppColors.iconDefaultColor),
     centerTitle: true,
   );
 }

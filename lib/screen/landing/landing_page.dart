@@ -5,6 +5,7 @@ import 'package:sakib/screen/home/home_page.dart';
 import 'package:sakib/screen/prayer/prayer_page.dart';
 import 'package:sakib/screen/qibla/qibla_page.dart';
 import 'package:sakib/screen/quran/quran_page.dart';
+import 'package:sakib/utility/app_colors.dart';
 import 'package:sakib/widget/current_location.dart';
 
 class LandingPage extends StatefulWidget {
@@ -45,7 +46,7 @@ class _LandingState extends State<LandingPage> {
       body: screens[currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
-        backgroundColor: const Color.fromRGBO(20, 30, 40, 20),
+        backgroundColor: AppColors.secondaryBackgroundColor,
         currentIndex: currentIndex,
         items: [
           BottomNavigationBarItem(
@@ -90,8 +91,8 @@ class _LandingState extends State<LandingPage> {
           ),
         ],
         onTap: (index) => setState(() => currentIndex = index),
-        selectedItemColor: const Color.fromRGBO(200, 220, 240, 20),
-        unselectedItemColor: const Color.fromRGBO(183, 220, 240, 10),
+        selectedItemColor: AppColors.textDefaultColor,
+        unselectedItemColor: AppColors.functionalTextBoxColor,
       ),
     );
   }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:sakib/service/full_surah_api_service.dart';
 import 'package:sakib/utility/app_colors.dart';
 import 'package:sakib/widget/loading_scenario.dart';
+import 'package:sakib/widget/option_app_bar.dart';
 
 class FullSurah extends StatefulWidget {
   const FullSurah({
@@ -56,12 +57,16 @@ class _FullSurahState extends State<FullSurah> {
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
+        backgroundColor: AppColors.secondaryBackgroundColor,
         actions: [
           TextButton(
             onPressed: () {
               Navigator.of(context).pop();
             },
-            child: const Text('Close'),
+            child: const Text(
+              'Close',
+              style: TextStyle(color: AppColors.textDefaultColor),
+            ),
           )
         ],
         content: SizedBox(
@@ -69,13 +74,34 @@ class _FullSurahState extends State<FullSurah> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              Text('Ayah Number in Quran: ${data['numberInQuran']}'),
-              Text('Juz: ${data['juz']}'),
-              Text('Manzil: ${data['manzil']}'),
-              Text('Page Number: ${data['page']}'),
-              Text('Ruku: ${data['ruku']}'),
-              Text('Hizb Quarter: ${data['hizbQuarter']}'),
-              Text('Sajda: ${data['sajda']}'),
+              Text(
+                'Ayah Number in Quran: ${data['numberInQuran']}',
+                style: const TextStyle(color: AppColors.textDefaultColor),
+              ),
+              Text(
+                'Juz: ${data['juz']}',
+                style: const TextStyle(color: AppColors.textDefaultColor),
+              ),
+              Text(
+                'Manzil: ${data['manzil']}',
+                style: const TextStyle(color: AppColors.textDefaultColor),
+              ),
+              Text(
+                'Page Number: ${data['page']}',
+                style: const TextStyle(color: AppColors.textDefaultColor),
+              ),
+              Text(
+                'Ruku: ${data['ruku']}',
+                style: const TextStyle(color: AppColors.textDefaultColor),
+              ),
+              Text(
+                'Hizb Quarter: ${data['hizbQuarter']}',
+                style: const TextStyle(color: AppColors.textDefaultColor),
+              ),
+              Text(
+                'Sajda: ${data['sajda']}',
+                style: const TextStyle(color: AppColors.textDefaultColor),
+              ),
             ],
           ),
         ),
@@ -93,9 +119,7 @@ class _FullSurahState extends State<FullSurah> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.primaryBackgroundColor,
-      appBar: AppBar(
-        title: Text(widget.name),
-      ),
+      appBar: optionAppBar(widget.name),
       body: isLoading
           ? const Center(
               child: LoadingScenario(),

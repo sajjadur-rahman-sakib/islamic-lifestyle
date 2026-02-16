@@ -25,12 +25,12 @@ class _TasbihState extends State<Tasbih> {
               height: 200,
               width: 200,
               decoration: const BoxDecoration(
-                  color: AppColors.primaryBackgroundColor,
+                  color: AppColors.secondaryBackgroundColor,
                   shape: BoxShape.circle,
                   boxShadow: [
                     BoxShadow(
                         offset: Offset(0, 5),
-                        color: Colors.white,
+                        color: AppColors.functionalTextBoxColor,
                         spreadRadius: 5,
                         blurRadius: 5)
                   ]),
@@ -40,13 +40,13 @@ class _TasbihState extends State<Tasbih> {
                       const EdgeInsets.symmetric(horizontal: 15, vertical: 5),
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      color: Colors.white),
+                      color: AppColors.functionalTextBoxColor),
                   child: GetBuilder<CounterController>(
                       builder: (counterController) {
                     return Text(
                       counterController.count.toString(),
                       style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                            color: Colors.black,
+                            color: AppColors.primaryBackgroundColor,
                             fontWeight: FontWeight.bold,
                             letterSpacing: 2,
                           ),
@@ -61,7 +61,7 @@ class _TasbihState extends State<Tasbih> {
                 width: 150,
                 height: 150,
                 decoration: const BoxDecoration(
-                  color: Color.fromRGBO(20, 30, 40, 20),
+                  color: AppColors.secondaryBackgroundColor,
                   borderRadius: BorderRadius.only(
                     bottomRight: Radius.circular(50),
                     bottomLeft: Radius.circular(50),
@@ -69,7 +69,7 @@ class _TasbihState extends State<Tasbih> {
                   boxShadow: [
                     BoxShadow(
                         offset: Offset(0, 5),
-                        color: Colors.white,
+                        color: AppColors.functionalTextBoxColor,
                         spreadRadius: 2,
                         blurRadius: 5)
                   ],
@@ -79,20 +79,21 @@ class _TasbihState extends State<Tasbih> {
                     ElevatedButton(
                       onPressed: Get.find<CounterController>().incrementCount,
                       style: ElevatedButton.styleFrom(
-                          maximumSize: const Size(80, 80)),
-                      child: Container(
-                        decoration: const BoxDecoration(
-                            color: Color.fromRGBO(10, 20, 30, 10),
-                            shape: BoxShape.circle),
+                        backgroundColor: AppColors.functionalButtonColor,
+                        foregroundColor: AppColors.textDefaultColor,
+                        maximumSize: const Size(80, 80),
                       ),
+                      child: const Icon(Icons.add),
                     ),
                     const SizedBox(
                       height: 10,
                     ),
                     ElevatedButton(
                       onPressed: Get.find<CounterController>().resetCount,
-                      style:
-                          ElevatedButton.styleFrom(foregroundColor: Colors.red),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: AppColors.functionalButtonColor,
+                        foregroundColor: AppColors.textDefaultColor,
+                      ),
                       child: const Text("Reset"),
                     )
                   ],
