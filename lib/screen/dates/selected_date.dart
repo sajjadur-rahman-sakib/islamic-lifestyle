@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hijri/hijri_calendar.dart';
-import 'package:sakib/utility/app_colors.dart';
+import 'package:deen/utility/app_colors.dart';
 
 class SelectedDate extends StatelessWidget {
   const SelectedDate({

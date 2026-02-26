@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:sakib/screen/tasbih/tasbih_calculation.dart';
-import 'package:sakib/utility/app_colors.dart';
-import 'package:sakib/widget/option_app_bar.dart';
+import 'package:deen/screen/tasbih/tasbih_calculation.dart';
+import 'package:deen/utility/app_colors.dart';
+import 'package:deen/widget/option_app_bar.dart';
 
 class Tasbih extends StatefulWidget {
   const Tasbih({super.key});

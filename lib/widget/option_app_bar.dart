@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sakib/utility/app_colors.dart';
+import 'package:deen/utility/app_colors.dart';
 
 AppBar optionAppBar(String title) {
   return AppBar(

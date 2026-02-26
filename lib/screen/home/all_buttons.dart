@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:sakib/screen/dates/calendar_page.dart';
-import 'package:sakib/screen/kalima/kalima_page.dart';
-import 'package:sakib/screen/maps/mosque_finder.dart';
-import 'package:sakib/screen/prayer/prayer_page.dart';
-import 'package:sakib/screen/qibla/qibla_page.dart';
-import 'package:sakib/screen/quran/quran_page.dart';
-import 'package:sakib/screen/tasbih/tasbih_page.dart';
-import 'package:sakib/screen/zakat/zakat_page.dart';
+import 'package:deen/screen/dates/calendar_page.dart';
+import 'package:deen/screen/kalima/kalima_page.dart';
+import 'package:deen/screen/maps/mosque_finder.dart';
+import 'package:deen/screen/prayer/prayer_page.dart';
+import 'package:deen/screen/qibla/qibla_page.dart';
+import 'package:deen/screen/quran/quran_page.dart';
+import 'package:deen/screen/tasbih/tasbih_page.dart';
+import 'package:deen/screen/zakat/zakat_page.dart';
 
 Widget buildMapsButton(BuildContext context) {
   double height = MediaQuery.of(context).size.height;

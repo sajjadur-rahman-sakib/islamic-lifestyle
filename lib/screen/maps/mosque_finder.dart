@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:http/http.dart' as http;
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:sakib/screen/maps/google_maps.dart';
-import 'package:sakib/utility/app_colors.dart';
-import 'package:sakib/widget/option_app_bar.dart';
+import 'package:deen/screen/maps/google_maps.dart';
+import 'package:deen/utility/app_colors.dart';
+import 'package:deen/widget/option_app_bar.dart';
 
 class MosqueFinder extends StatefulWidget {
   const MosqueFinder({super.key});

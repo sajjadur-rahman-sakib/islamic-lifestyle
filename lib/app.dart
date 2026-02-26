@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
-import 'package:sakib/binder/controller_binder.dart';
-import 'package:sakib/screen/landing/splash_screen.dart';
+import 'package:deen/binder/controller_binder.dart';
+import 'package:deen/screen/landing/splash_screen.dart';
 
 class MyApp extends StatefulWidget {
   const MyApp({super.key});

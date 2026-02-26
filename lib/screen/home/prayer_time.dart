@@ -2,8 +2,8 @@ import 'package:adhan/adhan.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
-import 'package:sakib/widget/current_location.dart';
-import 'package:sakib/widget/prayer_alarm.dart';
+import 'package:deen/widget/current_location.dart';
+import 'package:deen/widget/prayer_alarm.dart';
 
 class PrayerTime extends StatefulWidget {
   const PrayerTime({

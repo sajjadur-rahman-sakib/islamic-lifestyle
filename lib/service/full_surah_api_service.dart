@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
-import 'package:sakib/control/full_surah_api_data.dart';
+import 'package:deen/control/full_surah_api_data.dart';
 
 class FullSurahApiService {
   final FullSurahApiData _sharedPreferencesService = FullSurahApiData();

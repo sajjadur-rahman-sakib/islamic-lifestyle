@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:get/get.dart';
-import 'package:sakib/screen/landing/landing_page.dart';
-import 'package:sakib/utility/asset_paths.dart';
-import 'package:sakib/widget/current_location.dart';
+import 'package:deen/screen/landing/landing_page.dart';
+import 'package:deen/utility/asset_paths.dart';
+import 'package:deen/widget/current_location.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});

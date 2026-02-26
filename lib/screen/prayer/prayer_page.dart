@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:sakib/screen/prayer/prayer_time.dart';
-import 'package:sakib/utility/app_colors.dart';
-import 'package:sakib/widget/option_app_bar.dart';
+import 'package:deen/screen/prayer/prayer_time.dart';
+import 'package:deen/utility/app_colors.dart';
+import 'package:deen/widget/option_app_bar.dart';
 
 class Prayer extends StatefulWidget {
   const Prayer({super.key});

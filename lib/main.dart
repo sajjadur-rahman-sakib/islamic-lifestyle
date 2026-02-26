@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:sakib/app.dart';
+import 'package:deen/app.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:sakib/firebase/firebase_notification.dart';
-import 'package:sakib/firebase/firebase_options.dart';
+import 'package:deen/firebase/firebase_notification.dart';
+import 'package:deen/firebase/firebase_options.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:sakib/screen/dates/calendar_page.dart';
-import 'package:sakib/screen/home/home_page.dart';
-import 'package:sakib/screen/prayer/prayer_page.dart';
-import 'package:sakib/screen/qibla/qibla_page.dart';
-import 'package:sakib/screen/quran/quran_page.dart';
-import 'package:sakib/utility/app_colors.dart';
-import 'package:sakib/widget/current_location.dart';
+import 'package:deen/screen/dates/calendar_page.dart';
+import 'package:deen/screen/home/home_page.dart';
+import 'package:deen/screen/prayer/prayer_page.dart';
+import 'package:deen/screen/qibla/qibla_page.dart';
+import 'package:deen/screen/quran/quran_page.dart';
+import 'package:deen/utility/app_colors.dart';
+import 'package:deen/widget/current_location.dart';
 
 class LandingPage extends StatefulWidget {
   const LandingPage({super.key});

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:permission_handler/permission_handler.dart';
-import 'package:sakib/screen/qibla/qibla_compass.dart';
-import 'package:sakib/utility/app_colors.dart';
+import 'package:deen/screen/qibla/qibla_compass.dart';
+import 'package:deen/utility/app_colors.dart';
 
 class Qibla extends StatefulWidget {
   const Qibla({super.key});

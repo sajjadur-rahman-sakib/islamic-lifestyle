@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:sakib/screen/kalima/kalima_details.dart';
-import 'package:sakib/utility/app_colors.dart';
-import 'package:sakib/widget/option_app_bar.dart';
+import 'package:deen/screen/kalima/kalima_details.dart';
+import 'package:deen/utility/app_colors.dart';
+import 'package:deen/widget/option_app_bar.dart';
 
 class KalimaPage extends StatelessWidget {
   KalimaPage({super.key});

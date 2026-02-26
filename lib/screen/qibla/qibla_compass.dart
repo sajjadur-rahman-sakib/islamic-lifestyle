@@ -2,10 +2,10 @@ import 'dart:async';
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter_qiblah/flutter_qiblah.dart';
-import 'package:sakib/control/qibla_compass_state_data.dart';
-import 'package:sakib/utility/app_colors.dart';
-import 'package:sakib/widget/loading_scenario.dart';
-import 'package:sakib/widget/option_app_bar.dart';
+import 'package:deen/control/qibla_compass_state_data.dart';
+import 'package:deen/utility/app_colors.dart';
+import 'package:deen/widget/loading_scenario.dart';
+import 'package:deen/widget/option_app_bar.dart';
 
 class QiblaCompass extends StatefulWidget {
   const QiblaCompass({super.key});

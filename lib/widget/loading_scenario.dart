@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:sakib/utility/app_colors.dart';
-import 'package:sakib/utility/asset_paths.dart';
+import 'package:deen/utility/app_colors.dart';
+import 'package:deen/utility/asset_paths.dart';
 
 class LoadingScenario extends StatelessWidget {
   const LoadingScenario({super.key});

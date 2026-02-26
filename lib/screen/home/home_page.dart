@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hijri/hijri_calendar.dart';
 import 'package:intl/intl.dart';
-import 'package:sakib/screen/home/option_button.dart';
-import 'package:sakib/screen/home/prayer_time.dart';
-import 'package:sakib/utility/app_colors.dart';
-import 'package:sakib/widget/current_location.dart';
+import 'package:deen/screen/home/option_button.dart';
+import 'package:deen/screen/home/prayer_time.dart';
+import 'package:deen/utility/app_colors.dart';
+import 'package:deen/widget/current_location.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:just_audio/just_audio.dart';
-import 'package:sakib/screen/quran/full_surah.dart';
-import 'package:sakib/service/quran_surah_api_service.dart';
-import 'package:sakib/utility/app_colors.dart';
-import 'package:sakib/widget/loading_scenario.dart';
-import 'package:sakib/widget/option_app_bar.dart';
+import 'package:deen/screen/quran/full_surah.dart';
+import 'package:deen/service/quran_surah_api_service.dart';
+import 'package:deen/utility/app_colors.dart';
+import 'package:deen/widget/loading_scenario.dart';
+import 'package:deen/widget/option_app_bar.dart';
 
 class Quran extends StatefulWidget {
   const Quran({super.key});
